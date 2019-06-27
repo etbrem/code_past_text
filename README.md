@@ -19,15 +19,15 @@ One way would be to make sure the linker script will pad enough (in the file) af
 Since shellcode in the file might look suspicious, maybe having the shellcode used as data (a long XOR key or something) can make it look less suspicious.
 To do this I played a bit with the linker script so that the shellcode will be a global buffer saved in the start of the data segment, and the data segment will be placed right after the text segment in the file. I aligned the text to 0x1000 with 0s as padding, then added another 0x10 0s, and then placed the data segment. This effectively causes a DOUBLE-MAPPING of the start of the data to be also at the end of the text segment and also at the start of the data segment.
 
-[POC](images/code_past_text_poc.PNG)
+![POC](images/code_past_text_poc.PNG)
 
 -twitter: @etbrem
 
-###IDA
-[IDA](images/code_past_text_ida.PNG)
+### IDA
+![IDA](images/code_past_text_ida.PNG)
 
-###angr
-[angr](images/code_past_text_angr.PNG)
+### angr
+![angr](images/code_past_text_angr.PNG)
 
 ## Tested on
 
