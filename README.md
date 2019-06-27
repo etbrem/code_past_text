@@ -34,3 +34,4 @@ To do this I played a bit with the linker script so that the shellcode will be a
 
 ## TODO
 - Look for responsible linux ELF loader code
+- Test on more kernels (Windows WSL?)
