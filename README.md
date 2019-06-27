@@ -28,8 +28,8 @@ To do this I played a bit with the linker script so that the shellcode will be a
 
 ## Resources
 
--[https://mcuoneclipse.com/2014/06/23/filling-unused-memory-with-the-gnu-linker/]
--[http://blog.hrbacek.info/2013/12/28/filling-unused-memory-area-using-gnu-linker-script/]
+* [https://mcuoneclipse.com/2014/06/23/filling-unused-memory-with-the-gnu-linker/]
+* [http://blog.hrbacek.info/2013/12/28/filling-unused-memory-area-using-gnu-linker-script/]
 
 
 ## TODO
