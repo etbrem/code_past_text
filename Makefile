@@ -1,6 +1,6 @@
 
 poc: clean
-	gcc -T linker_script poc.c -o poc -Wl,--verbose
+	gcc -nostdlib -T linker_script poc.c -o poc 
 clean:
 	touch poc
 	rm poc

@@ -21,6 +21,7 @@ To do this I played a bit with the linker script so that the shellcode will be a
 
 -twitter: @etbrem
 
+
 ## Tested on
 
 -Linux kali 4.19.0-kali4-amd64 #1 SMP Debian 4.19.28-2kali1 (2019-03-18) x86_64 GNU/Linux
