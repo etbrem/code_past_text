@@ -22,7 +22,7 @@ To do this I played a bit with the linker script so that the shellcode will be a
 
 ![POC](images/code_past_text_poc.PNG)
 
-Twitter: [@etbrem](https://twitter.com/etbrem)
+#### __Twitter: [@etbrem](https://twitter.com/etbrem)__
 
 ### IDA
 ![IDA](images/code_past_text_ida.PNG)
