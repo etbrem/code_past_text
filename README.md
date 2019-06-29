@@ -18,7 +18,8 @@ One way would be to make sure the linker script will pad enough (in the file) af
 
 Since shellcode in the file might look suspicious, maybe having the shellcode be used as data (a long XOR key or something) can make it look less suspicious.
 
-To do this I played a bit with the linker script so that the shellcode will be a global buffer saved in the start of the data segment, and the data segment will be placed right after the text segment in the file. I aligned the text to 0x1000 with 0s as padding, then added another 0x10 0s, and then placed the data segment. This effectively causes a DOUBLE-MAPPING of the start of the data to be also at the end of the text segment and also at the start of the data segment.
+To do this I played a bit with the linker script so that the shellcode will be a global buffer saved in the start of the data segment, and the data segment will be placed right after the text segment in the file.
+I aligned the text to 0x1000 with 0s as padding, then added another 0x10 0s, and then placed the data segment. This effectively causes a DOUBLE-MAPPING of the start of the data to be also at the end of the text segment and also at the start of the data segment.
 
 ![POC](images/code_past_text_poc.PNG)
 
@@ -32,7 +33,7 @@ To do this I played a bit with the linker script so that the shellcode will be a
 
 ## Tested on
 
-__Note__ that generally the layout of the ELF depends on your linker and running your own compiled of poc.c might not always work and can crash, but it's not difficult to play with the linker_script and make it work.
+__Note__ that generally the layout of the ELF depends on your linker and running your own compiled version of poc.c might not always work and can crash, but it's not difficult to play with the linker_script and make it work.
 
 * Linux kali 4.19.0-kali4-amd64 #1 SMP Debian 4.19.28-2kali1 (2019-03-18) x86_64 GNU/Linux
 
