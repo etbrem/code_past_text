@@ -25,6 +25,8 @@ I aligned the text to 0x1000 with 0s as padding, then added another 0x10 0s, and
 
 #### __Twitter: [@etbrem](https://twitter.com/etbrem)__
 
+
+
 ### IDA
 ![IDA](images/code_past_text_ida.PNG)
 
@@ -36,15 +38,17 @@ I aligned the text to 0x1000 with 0s as padding, then added another 0x10 0s, and
 __Note__ that generally the layout of the ELF depends on your linker and running your own compiled version of poc.c might not always work and can crash, but it's not difficult to play with the linker_script and make it work.
 
 * Linux kali 4.19.0-kali4-amd64 #1 SMP Debian 4.19.28-2kali1 (2019-03-18) x86_64 GNU/Linux
-
+* (doesn't work) Linux Lenovo-PC 4.4.0-17134-Microsoft #706-Microsoft Mon Apr 01 18:13:00 PST 2019 x86_64 x86_64 x86_64 GNU/Linux (__WSL__)
 
 ## Resources
 
 * <https://mcuoneclipse.com/2014/06/23/filling-unused-memory-with-the-gnu-linker>
 * <https://web.archive.org/web/20160722090537/http://blog.hrbacek.info/2013/12/28/filling-unused-memory-area-using-gnu-linker-script>
 * <https://www.exploit-db.com/exploits/42179>
+* <https://sourceware.org/binutils/docs-2.27/ld/Builtin-Functions.html>
+* <https://web.eecs.umich.edu/~prabal/teaching/eecs373-f11/readings/Linker.pdf> (page 54 shows how to FILL with NOPs)
 
 
 ## TODO
 - Look for responsible linux ELF loader code
-- Test on more kernels (Windows WSL?)
+- Test on more kernels
